@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule } from '@angular/forms';
 
 import { MaterialRoutingModule } from '../material-routing/material-routing.module'; 
 import { MatButtonModule } from '@angular/material/button';
@@ -20,15 +20,20 @@ const MaterialComponents = {
   MatInputModule,
   MatTableModule,
   MatFormField,
-  FormsModule
+  FormsModule,
+  FormGroup
 }
 
 @NgModule({
   declarations:[
     LoginComponent,
     UserComponent,
-    UserChildComponent
+    UserChildComponent,
   ],
-  imports: [MaterialRoutingModule,MatFormFieldModule ]
+  imports: [
+    MaterialRoutingModule,
+    MatFormFieldModule 
+  ],
+  exports: []
 })
 export class MaterialModule { }
