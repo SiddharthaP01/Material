@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     this.auth.loginUser(this.loginForm.value).subscribe(
       res => {
         localStorage.setItem('token', res.token)
-        this.route.navigate(['/material/material-user'])
+        this.route.navigate(['/material-user'])
       },
       err => {
         console.log(err)

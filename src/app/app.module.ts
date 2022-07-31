@@ -9,28 +9,30 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
-import { MaterialModule } from './material/material/material.module';
+import { MaterialModule } from './material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [AuthGuard, AuthService, MaterialModule,
   {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true
-  }],
+  },
+  UserService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
