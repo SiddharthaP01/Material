@@ -15,7 +15,7 @@ import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,6 @@ import { UserService } from './services/user.service';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MaterialModule
   ],
   providers: [AuthGuard, AuthService, MaterialModule,
   {

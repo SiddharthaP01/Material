@@ -22,7 +22,7 @@ const MaterialComponents = [
   MatFormField,
   MatFormFieldModule,
   FormsModule,
-  MatError
+  
 ]
 
 @NgModule({
@@ -32,9 +32,10 @@ const MaterialComponents = [
     UserChildComponent,
   ],
   imports: [
+    MaterialComponents,
     CommonModule,
     MaterialRoutingModule,
-    MaterialComponents 
+    //MaterialComponents 
   ],
   exports: [MaterialComponents]
 })
