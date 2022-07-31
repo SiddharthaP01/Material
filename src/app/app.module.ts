@@ -23,7 +23,7 @@ import { UserService } from './services/user.service';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    MaterialModule
   ],
   providers: [AuthGuard, AuthService, MaterialModule,
   {

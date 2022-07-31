@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:"material", loadChildren:()=>import('./material/material.module')
-  .then(mod=>mod.MaterialModule)
+    path:"material",
+    loadChildren:()=>import('./material/material.module').then(mod=>mod.MaterialModule)
   }
 ];
 
