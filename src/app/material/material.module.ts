@@ -35,7 +35,7 @@ const MaterialComponents = [
     MaterialComponents,
     CommonModule,
     MaterialRoutingModule,
-    //MaterialComponents 
+    MaterialComponents 
   ], 
   exports: [MaterialComponents]
 })
